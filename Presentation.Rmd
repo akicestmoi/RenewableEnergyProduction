@@ -1,0 +1,46 @@
+---
+title: "Renewable Energy Production Forecasting"
+author: "Aki Taniguchi"
+date: "06/01/2020"
+output: slidy_presentation
+---
+
+## Coursera Developing Data Products Presentation
+
+For the final Coursera's "Developing Data Product" Project, we will forecast one specific area's future Renewable Energy Production. To help the user in his analysis, the application provides interactive dataset to better understand current trends of the world Renewable Energy Production. As such, it has 4 interactive tabs:
+
+- an Interactive Map Tab
+- an Interactive Charts Tab
+- an Interactive Table Tab
+- an Interactive Forecast Tab
+
+The original database can be found at [irena's website](https://www.irena.org/Statistics/Download-Data).
+
+The application can be found at the following URL: https://akicestmoi.shinyapps.io/RenewableEnergyExploration/
+
+
+## Interactive Map
+
+It uses the leaflet library to produce the interactive map feature. 
+
+- The area, the type of Renewable Energy as well as the future dates can be chosen at user convenience.
+- The energy production (expressed in GW/h) is shown as a red circle, but with radius equal to the square root of production, scaled down for a better visualisation effect.
+- The user can click on the circle, which will show a pop-up with name of area, as well as the exact energy production quantity. 
+
+
+## Interactive Charts and Table
+
+The Graphs, based on plotly, show trends of Energy Production, starting from 2000 to 2017. The user can analyse it from 2 angles:
+
+- Each area's production (changeable at user convenience), split by energy type (e.g. Hydropower/Solar/Wind etc) per year
+- Each Energy type (changeable at user convenience), split by area per year
+
+The table includes a filtering feature to dig into the original database. The available columns are: Name of Area, Type of Energy, Latitude, Longitude, Continent it belongs to (note that for higher level areas such as the continents themselves, it is set to "None"), Year, and Energy Production in GW/h.
+
+
+## Interactive Forecast
+
+The core of the application, the forecast shows what could be one area's energy production for a specific type of energy, for given years (which can be set at user convenience).
+The user can use the slider to select all upcoming year's production (from 2018 up to 2050, as the original database ends in 2017). It then shows a graph which displays the future trends, and a table below it to show the exact energy production quantity per year.
+
+The forecast is calculated using a simple linear extrapolation. For those interested in the specifics, please refer to this [Wikipedia page](https://en.wikipedia.org/wiki/Extrapolation).
