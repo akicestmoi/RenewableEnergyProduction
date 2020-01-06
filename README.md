@@ -1,7 +1,10 @@
 # RenewableEnergyProduction
 Coursera Developing Data Product Project
 
-All codes are stored here, from the Shiny application UI and Server, to the Slidify Presentation Code.
+All codes and original csv database are stored here.
+- Shiny application UI and Server
+- Slidify Presentation Code
+- Original CSVs
 
 The Shiny application is deployed here: https://akicestmoi.shinyapps.io/RenewableEnergyExploration/
 
